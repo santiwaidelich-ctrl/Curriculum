@@ -3,55 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Currículum Online</title>
+<title>TrabajoYa - Encuentra empleo</title>
 
 <style>
-body{
-    font-family: Arial, sans-serif;
+*{
     margin:0;
-    background:#f4f4f4;
-    color:#333;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
 }
 
 header{
-    background:#1e3a8a;
+    background:#0d6efd;
     color:white;
-    text-align:center;
-    padding:40px;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.container{
-    max-width:1000px;
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#0d6efd,#3f8cff);
+    color:white;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.search-box{
+    max-width:700px;
     margin:auto;
-    padding:20px;
+    display:flex;
+    gap:10px;
+}
+
+.search-box input{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+}
+
+.search-box button{
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:50px 20px;
+    flex-wrap:wrap;
 }
 
 .card{
     background:white;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    padding:30px;
+    width:250px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+    text-align:center;
 }
 
-h2{
-    color:#1e3a8a;
+.card h2{
+    color:#0d6efd;
+    margin-bottom:10px;
 }
 
-ul{
-    padding-left:20px;
+.section{
+    padding:60px 10%;
 }
 
-.contacto a{
-    color:#1e3a8a;
+.section h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.buttons{
+    text-align:center;
+}
+
+.buttons a{
+    display:inline-block;
+    margin:10px;
+    padding:15px 25px;
+    background:#0d6efd;
+    color:white;
     text-decoration:none;
+    border-radius:8px;
 }
 
 footer{
+    background:#222;
+    color:white;
     text-align:center;
     padding:20px;
-    background:#1e3a8a;
-    color:white;
 }
 </style>
 </head>
@@ -59,56 +134,75 @@ footer{
 <body>
 
 <header>
-    <h1>Tu Nombre Completo</h1>
-    <p>Estudiante | Programador | Diseñador</p>
+    <div class="logo">TrabajoYa</div>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Empleos</a>
+        <a href="#">Empresas</a>
+        <a href="#">Contacto</a>
+    </nav>
 </header>
 
-<div class="container">
+<section class="hero">
+    <h1>Encuentra tu próximo trabajo</h1>
+    <p>Miles de oportunidades laborales en un solo lugar</p>
 
-    <div class="card">
-        <h2>Sobre mí</h2>
-        <p>
-            Escribe aquí una breve descripción sobre ti,
-            tus objetivos y tus intereses profesionales.
-        </p>
+    <div class="search-box">
+        <input type="text" placeholder="Buscar empleo...">
+        <button>Buscar</button>
     </div>
+</section>
 
+<section class="stats">
     <div class="card">
-        <h2>Experiencia</h2>
-        <h3>Empresa o Proyecto</h3>
-        <p>2025 - Actualidad</p>
-        <p>Descripción de las tareas realizadas.</p>
-    </div>
-
-    <div class="card">
-        <h2>Educación</h2>
-        <h3>Nombre de la institución</h3>
-        <p>Título o estudios realizados.</p>
+        <h2>10.000+</h2>
+        <p>Usuarios</p>
     </div>
 
     <div class="card">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Trabajo en equipo</li>
-            <li>Comunicación</li>
-        </ul>
+        <h2>500+</h2>
+        <p>Empresas</p>
     </div>
 
-    <div class="card contacto">
-        <h2>Contacto</h2>
-        <p>Email: tucorreo@email.com</p>
-        <p>Teléfono: +54 9 xxx xxxx xxx</p>
-        <p>GitHub: <a href="#">TuGitHub</a></p>
-        <p>LinkedIn: <a href="#">TuLinkedIn</a></p>
+    <div class="card">
+        <h2>2.000+</h2>
+        <p>Empleos</p>
     </div>
+</section>
 
-</div>
+<section class="section">
+    <h2>¿Qué quieres hacer?</h2>
+
+    <div class="buttons">
+        <a href="#">Buscar Trabajo</a>
+        <a href="#">Crear Perfil</a>
+        <a href="#">Publicar Empleo</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>¿Por qué TrabajoYa?</h2>
+
+    <div class="stats">
+        <div class="card">
+            <h2>Rápido</h2>
+            <p>Encuentra empleo en minutos.</p>
+        </div>
+
+        <div class="card">
+            <h2>Seguro</h2>
+            <p>Empresas verificadas.</p>
+        </div>
+
+        <div class="card">
+            <h2>Gratis</h2>
+            <p>Crea tu perfil sin costo.</p>
+        </div>
+    </div>
+</section>
 
 <footer>
-    © 2026 - Mi Currículum Online
+    © 2026 TrabajoYa - Todos los derechos reservados
 </footer>
 
 </body>
